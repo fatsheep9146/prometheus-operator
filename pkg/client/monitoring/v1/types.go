@@ -111,6 +111,8 @@ type PrometheusSpec struct {
 	Affinity *v1.Affinity `json:"affinity,omitempty"`
 	// If specified, the pod's tolerations.
 	Tolerations []v1.Toleration `json:"tolerations,omitempty"`
+	// If specified, the pod hostNetwork is enabled
+	HostNetwork bool `json:"hostNetwork,omitempty"`
 }
 
 // Most recent observed status of the Prometheus cluster. Read-only. Not
@@ -313,6 +315,8 @@ type AlertmanagerSpec struct {
 	Affinity *v1.Affinity `json:"affinity,omitempty"`
 	// If specified, the pod's tolerations.
 	Tolerations []v1.Toleration `json:"tolerations,omitempty"`
+	// If specified, the pod's hostNetwork will be true
+	HostNetwork bool `json:"hostNetwork,omitempty"`
 }
 
 // A list of Alertmanagers.
