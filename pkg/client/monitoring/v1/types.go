@@ -113,6 +113,8 @@ type PrometheusSpec struct {
 	Tolerations []v1.Toleration `json:"tolerations,omitempty"`
 	// If specified, the pod hostNetwork is enabled
 	HostNetwork bool `json:"hostNetwork,omitempty"`
+        // If specified, the prometheus -storage.local.chunk-encoding-version is set as this value
+        ChunkEncodingVersion int32 `json:"chuckEncodingVersion",omitempty`
 }
 
 // Most recent observed status of the Prometheus cluster. Read-only. Not
